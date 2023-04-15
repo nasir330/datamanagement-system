@@ -1,0 +1,163 @@
+.login-form {
+    width: 400px;
+    height: auto;
+    margin: 5% auto;
+}
+
+.login-form a {
+    text-decoration: none;
+}
+
+.login-form a strong {
+    font-weight: normal;
+}
+
+.login-form a:hover strong {
+    font-weight: bold;
+}
+
+.dashboard-body {
+    background-color: lightgray;
+}
+
+.dashboard-seciton {
+    margin-top:5%;
+    background-color: gainsboro;
+    border: 1px solid lightgrey;
+    border-radius: 10px 10px 10px 10px;
+}
+
+aside {
+    margin-top:0px;
+    background-color: gainsboro;
+    height: 100vh;
+}
+
+/* aside ul li{
+   padding:2px;
+   font-size:18px;
+} */
+/* aside ul li:hover{
+  background-color: aliceblue;
+  font-weight:bold;
+} */
+
+nav.navbar{
+    position:fixed;
+    top:0px;
+}
+.nav-link i,
+p {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-link i,
+p:hover {
+    text-decoration: none;
+    padding-left: 5px;
+    color: #0098FD;
+}
+
+.dropdown-menu li {
+    font-weight: normal;
+}
+
+.nav-treeview {
+    background-color: rgba(0, 152, 253, 0.1);
+    border-radius: 5px 5px 5px 5px;
+}
+
+#message {
+    font-size: 12px;
+    position: relative;
+    top: -12px;
+    left: 28px;
+}
+
+#notification {
+    font-size: 12px;
+    position: relative;
+    top: -12px;
+    left: 28px;
+}
+
+.piechart {
+    background-image: linear-gradient(to top, rgba(138, 43, 226, 0.9), rgba(138, 43, 226), rgba(138, 43, 226));
+    border-radius: 10px 10px 10px 10px;
+}
+
+.piechart .card-header {
+    background-color: blueviolet;
+}
+
+#donutchart {
+    position: relative;
+    top: -10%;
+    width: 100%;
+    height: 100%;
+}
+
+.barChart {
+    background-image: linear-gradient(to top, rgba(138, 43, 226, 0.9), rgba(138, 43, 226), rgba(138, 43, 226));
+    border-radius: 10px 10px 10px 10px;
+}
+
+.barChart .card-header {
+    background-color: blueviolet;
+}
+
+.profile-hader {
+    margin:10px auto;
+    height: 100px;
+    border-radius: 10px 10px 0px 0px;    
+}
+
+.profile-hader img {
+    width: 100px;
+    height: 100px;
+    border: 5px solid gainsboro;
+    border-radius: 50%;
+}
+
+
+.appLogo img {
+    width:100%;    
+}
+
+table #actionTable {
+    background: transparent;
+}
+
+.setting-item-section {
+    border: 2px solid lightgray;
+}
+
+.setting-item-header {
+    background-color: lightgray;
+}
+
+.photo-edit-btn {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgba(0, 152, 253, 0.6);
+    position: absolute;
+    bottom: 20%;
+    left: 60%;
+}
+
+.icon {
+    font-size: 18px;
+    color: #fff;
+}
+
+.photo-edit-btn:hover {
+    opacity: 0.8;
+}
+
+.notification ul li a {
+    list-style: none;
+    float: left;
+    display: block;
+}
