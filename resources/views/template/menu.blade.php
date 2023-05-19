@@ -1,6 +1,14 @@
 <aside class="main-sidebar elevation-4">
-    <!-- Sidebar -->
-    <div class="sidebar mt-4">
+    <!-- profile section navigation start -->
+    <div class="d-flex justify-content-center appLogo">
+            @if(!empty(Auth::user()->appsetting->appLogo))
+            <img class="m-2" src="{{asset('')}}{{Auth::user()->appsetting->appLogo}}" alt="">
+            @else
+            <span class="font-weight-light">Logo Here</span>
+            @endif
+        </div>
+        <!-- profile section navigation end -->
+    <div class="sidebar">        
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">

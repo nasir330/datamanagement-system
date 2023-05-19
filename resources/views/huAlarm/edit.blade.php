@@ -4,17 +4,14 @@
 <body class="hold-transition sidebar-mini layout-fixed">
     <!-- main wrapper start -->
     <div class="wrapper">
-
-        <!-- Navbar start-->
-        @include('template.nav')
-        <!-- Navbar end-->
         <!-- Menu start -->
         @include('template.menu')
         <!-- Menu end -->
-
         <!-- body content start -->
         <div class="content-wrapper dashboard-seciton">
-
+            <!-- Navbar start-->
+            @include('template.nav')
+            <!-- Navbar end-->
             <!-- body content header start -->
             <div class="content-header">
                 <div class="container-fluid">
@@ -89,7 +86,8 @@
                                     <label for="nType">Ntype</label>
                                     <div class="input-group">
                                         <select name="nType" id="" class="form-select form-control" required>
-                                            <option value="{{$editAlarm->nType}}">{{$editAlarm->netypes->ne_type}}</option>
+                                            <option value="{{$editAlarm->nType}}">{{$editAlarm->netypes->ne_type}}
+                                            </option>
                                             @foreach($neTypes as $nType)
                                             <option value="{{$nType->id}}">{{$nType->ne_type}}</option>
                                             @endforeach
@@ -143,7 +141,9 @@
                                     <label for="sev">Sev</label>
                                     <div class="input-group">
                                         <select name="sev" id="" class="form-select form-control" required>
-                                            <option value="{{$editAlarm->sev}}">{{$editAlarm->severities->severity}}</option>
+                                            <option value="{{$editAlarm->sev}}">
+                                                {{$editAlarm->sev}}
+                                            </option>
                                             @foreach($severites as $sev)
                                             <option value="{{$sev->id}}">{{$sev->severity}}</option>
                                             @endforeach

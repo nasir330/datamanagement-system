@@ -3,13 +3,6 @@
 
 <body class="dashboard-body">
     <div class="container-fluid">
-        <!-- navigation start -->
-        <div class="row">
-            @include('template.nav')
-        </div>
-        <!-- navigation end -->
-
-
         <div class="row">
             <!-- menu start -->
             @include('template.menu')
@@ -19,6 +12,11 @@
             <div class="col-10">
                 <div class="row">
                     <div class="dashboard-seciton m-1">
+                        <!-- navigation start -->
+                        <div class="row">
+                            @include('template.nav')
+                        </div>
+                        <!-- navigation end -->
                         <div class="row">
                             <h5 class="mb-2 p-2">User Logs</h5>
                         </div>

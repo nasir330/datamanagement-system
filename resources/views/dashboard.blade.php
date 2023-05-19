@@ -4,17 +4,15 @@
 <body class="hold-transition sidebar-mini layout-fixed">
     <!-- main wrapper start -->
     <div class="wrapper">
-
-      
         <!-- Menu start -->
         @include('template.menu')
         <!-- Menu end -->
 
         <!-- body content start -->
         <div class="content-wrapper dashboard-seciton">
-  <!-- Navbar start-->
-  @include('template.nav')
-        <!-- Navbar end-->
+            <!-- Navbar start-->
+            @include('template.nav')
+            <!-- Navbar end-->
             <!-- body content header start -->
             <div class="content-header">
                 <div class="container-fluid">
@@ -45,29 +43,29 @@
                     <div class="row">
                         <!-- date search form start -->
                         <form id="dateSearchForm" action="{{route('dashboardSearchbyDate')}}" method="post">
-                                @csrf
-                                <div class="row g-3 align-items-center mb-2">
-                                    <div class="col-auto">
-                                        <label for="date_from" class="col-form-label">From date</label>
-                                    </div>
-                                    <div class="col-auto">
-                                        <input type="date" name="date_from" class="form-control">
-                                    </div>
-                                    <div class="col-auto">
-                                        <label for="date_to" class="col-form-label">To date</label>
-                                    </div>
-                                    <div class="col-auto">
-                                        <input type="date" name="date_to" class="form-control">
-                                    </div>
-                                    <div class="col-auto">
-                                        <button id="searchDatebtn" class="btn btn-primary">Search</button>
-                                    </div>
-                                    <div class="col-auto">
-                                        <button class="btn btn-primary">Refresh</button>
-                                    </div>
+                            @csrf
+                            <div class="row g-3 align-items-center mb-2">
+                                <div class="col-auto">
+                                    <label for="date_from" class="col-form-label">From date</label>
                                 </div>
-                            </form>
-                            <!-- date search form end -->                     
+                                <div class="col-auto">
+                                    <input type="date" name="date_from" class="form-control">
+                                </div>
+                                <div class="col-auto">
+                                    <label for="date_to" class="col-form-label">To date</label>
+                                </div>
+                                <div class="col-auto">
+                                    <input type="date" name="date_to" class="form-control">
+                                </div>
+                                <div class="col-auto">
+                                    <button id="searchDatebtn" class="btn btn-primary">Search</button>
+                                </div>
+                                <div class="col-auto">
+                                    <button class="btn btn-primary">Refresh</button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- date search form end -->
                     </div>
                 </div>
             </div>

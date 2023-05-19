@@ -4,17 +4,14 @@
 <body class="hold-transition sidebar-mini layout-fixed">
     <!-- main wrapper start -->
     <div class="wrapper">
-
-        <!-- Navbar start-->
-        @include('template.nav')
-        <!-- Navbar end-->
         <!-- Menu start -->
         @include('template.menu')
         <!-- Menu end -->
-
         <!-- body content start -->
         <div class="content-wrapper dashboard-seciton">
-
+            <!-- Navbar start-->
+            @include('template.nav')
+            <!-- Navbar end-->
             <!-- body content header start -->
             <div class="content-header">
                 <div class="container-fluid">
@@ -325,8 +322,8 @@
         </div>
         <!-- body content end -->
 
-         <!-- Modal -->
-         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-sm">
                 <div class="modal-content">
                     <form action="{{route('importHuAlarm')}}" method="post" enctype="multipart/form-data">

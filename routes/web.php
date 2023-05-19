@@ -70,6 +70,7 @@ Route::post('search-notification}',[NotificationController::class, 'searchNotifi
     Route::get('edit-huAlarm/{id}',[HuAlarmController::class, 'edit'])->name('editHuAlarm');
     Route::post('update-huAlarm',[HuAlarmController::class, 'update'])->name('updateHuAlarm');
     Route::get('delete-huAlarm/{id}',[HuAlarmController::class, 'delete'])->name('deleteHuAlarm');
+    Route::post('huAlarm-search-type',[HuAlarmController::class, 'searchHuAlarmbyType'])->name('searchHuAlarmbyType');
     Route::post('huAlarm-search-byDate',[HuAlarmController::class, 'searchHuAlarmbyDate'])->name('searchHuAlarmbyDate');
     Route::post('huAlarm-search-name',[HuAlarmController::class, 'searchHuAlarmbyName'])->name('searchHuAlarmbyName');
     Route::post('/export-hualarm',[HuAlarmController::class, 'exportHuAlarm'])->name('exportHuAlarm');

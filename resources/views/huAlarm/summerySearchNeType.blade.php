@@ -4,17 +4,14 @@
 <body class="hold-transition sidebar-mini layout-fixed">
     <!-- main wrapper start -->
     <div class="wrapper">
-
-        <!-- Navbar start-->
-        @include('template.nav')
-        <!-- Navbar end-->
         <!-- Menu start -->
         @include('template.menu')
         <!-- Menu end -->
-
         <!-- body content start -->
         <div class="content-wrapper dashboard-seciton">
-
+            <!-- Navbar start-->
+            @include('template.nav')
+            <!-- Navbar end-->
             <!-- body content header start -->
             <div class="content-header">
                 <div class="container-fluid">
@@ -31,7 +28,8 @@
                                         <label for="neType_name" class="col-form-label">Search by NeType</label>
                                     </div>
                                     <div class="col-auto">
-                                        <input type="text" name="neType_name" class="form-control" placeholder="Enter a NeType">
+                                        <input type="text" name="neType_name" class="form-control"
+                                            placeholder="Enter a NeType">
                                     </div>
                                     <div class="col-auto">
                                         <button class="btn btn-primary">Search</button>

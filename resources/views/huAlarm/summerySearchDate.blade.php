@@ -4,19 +4,17 @@
 <body class="hold-transition sidebar-mini layout-fixed">
     <!-- main wrapper start -->
     <div class="wrapper">
-
-        <!-- Navbar start-->
-        @include('template.nav')
-        <!-- Navbar end-->
         <!-- Menu start -->
         @include('template.menu')
         <!-- Menu end -->
 
         <!-- body content start -->
         <div class="content-wrapper dashboard-seciton">
-
-             <!-- body content header start -->
-             <div class="content-header">
+            <!-- Navbar start-->
+            @include('template.nav')
+            <!-- Navbar end-->
+            <!-- body content header start -->
+            <div class="content-header">
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-md-6">
@@ -31,7 +29,8 @@
                                         <label for="neType_name" class="col-form-label">Search by NeType</label>
                                     </div>
                                     <div class="col-auto">
-                                        <input type="text" name="neType_name" class="form-control" placeholder="Enter a NeType">
+                                        <input type="text" name="neType_name" class="form-control"
+                                            placeholder="Enter a NeType">
                                     </div>
                                     <div class="col-auto">
                                         <button class="btn btn-primary">Search</button>
@@ -81,7 +80,7 @@
                                     <td>NeType</td>
                                     <td>Alarm Source</td>
                                     <td>Alarm Name</td>
-                                    <td>Domain</td>                                    
+                                    <td>Domain</td>
                                 </tr>
                             </thead>
                             <tbody class="text-center">
@@ -97,18 +96,18 @@
                                     </td>
                                     <td>{{$neType->aSource}} </td>
                                     <td>{{$neType->aName}} </td>
-                                    <td>                                        
+                                    <td>
                                         @if(!empty($neType->netypes->domain))
-                                        {{$neType->netypes->domain->domain}} 
+                                        {{$neType->netypes->domain->domain}}
                                         @else
                                         <strong class="text-danger">change/remove</strong>
                                         @endif
-                                    </td>                                                                     
+                                    </td>
                                 </tr>
 
                                 @endforeach
                             </tbody>
-                        </table>                       
+                        </table>
                     </div>
                     <!-- members data table end -->
                 </div>

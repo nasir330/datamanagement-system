@@ -3,17 +3,16 @@
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <!-- main wrapper start -->
-    <div class="wrapper">
-
-        <!-- Navbar start-->
-        @include('template.nav')
-        <!-- Navbar end-->
+    <div class="wrapper">       
         <!-- Menu start -->
         @include('template.menu')
         <!-- Menu end -->
 
         <!-- body content start -->
         <div class="content-wrapper dashboard-seciton">
+             <!-- Navbar start-->
+        @include('template.nav')
+        <!-- Navbar end-->
             <!-- Body main content start -->
             <section class="content">
                 <!-- profile section navigation start -->

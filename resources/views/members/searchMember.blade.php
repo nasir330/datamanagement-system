@@ -4,17 +4,15 @@
 <body class="hold-transition sidebar-mini layout-fixed">
     <!-- main wrapper start -->
     <div class="wrapper">
-
-        <!-- Navbar start-->
-        @include('template.nav')
-        <!-- Navbar end-->
         <!-- Menu start -->
         @include('template.menu')
         <!-- Menu end -->
 
         <!-- body content start -->
         <div class="content-wrapper dashboard-seciton">
-
+            <!-- Navbar start-->
+            @include('template.nav')
+            <!-- Navbar end-->
             <!-- body content header start -->
             <div class="content-header">
                 <div class="container-fluid">
@@ -101,7 +99,7 @@
                                 </tr>
                                 @endforeach
                             </tbody>
-                        </table>                        
+                        </table>
                     </div>
                     <!-- members data table end -->
                 </div>

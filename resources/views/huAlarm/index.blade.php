@@ -4,17 +4,14 @@
 <body class="hold-transition sidebar-mini layout-fixed">
     <!-- main wrapper start -->
     <div class="wrapper">
-
-        <!-- Navbar start-->
-        @include('template.nav')
-        <!-- Navbar end-->
         <!-- Menu start -->
         @include('template.menu')
         <!-- Menu end -->
-
         <!-- body content start -->
         <div class="content-wrapper dashboard-seciton">
-
+            <!-- Navbar start-->
+            @include('template.nav')
+            <!-- Navbar end-->
             <!-- body content header start -->
             <div class="content-header">
                 <div class="container-fluid">
@@ -24,15 +21,15 @@
                         </div>
                         <div class="col-md-6 d-flex justify-content-end">
                             <!-- user search form start -->
-                            <form action="{{route('searchHuAlarmbyName')}}" method="post">
+                            <form id="huAlarm" action="{{route('searchHuAlarmbyName')}}" method="post">
                                 @csrf
                                 <div class="row g-3 align-items-center mb-2">
                                     <div class="col-auto">
-                                        <label for="oIName" class="col-form-label">OIName</label>
+                                        <label for="type" class="col-form-label">Search by Type</label>
                                     </div>
                                     <div class="col-auto">
-                                        <input type="text" name="OIName" class="form-control"
-                                            placeholder="Enter  OIName">
+                                        <input id="searchType" type="text" name="type" class="form-control"
+                                            placeholder="Enter  type">
                                     </div>
                                     <div class="col-auto">
                                         <button class="btn btn-primary">Search</button>
@@ -79,7 +76,7 @@
                     <!-- notification alart section start -->
                     <div class="row">
                         <div class="col d-flex justify-content-center">
-                         
+
                             @if(session()->has('delete-success'))
                             <div id="successMessage" class="text-center text-danger p-1">
                                 {{session('delete-success')}}
@@ -96,7 +93,8 @@
 
                     <!-- HuAlarm list table start -->
                     <div class="row">
-                        <table style="font-size:14px;" class="table table-striped table-hover">
+                        <div class="card-body">
+                        <table id="myTable" style="font-size:14px;" class="display table table-bordered table-striped">
                             <thead class="text-center text-uppercase">
                                 <tr>
                                     <td>#</td>
@@ -114,8 +112,8 @@
                                     <td>Additional Text</td>
                                     <td>#</td>
                                 </tr>
-                            </thead>
-                            <tbody class="text-center">
+                            </thead>                          
+                            <tbody id="huAlarmSearchResult" class="text-center">
                                 @foreach($huAlarms as $key=> $huAlarm)
                                 <tr>
                                     <td>{{$key+1}}</td>
@@ -162,6 +160,7 @@
                             </tbody>
                         </table>
                         <span>{{$huAlarms->links()}}</span>
+                        </div>                        
                     </div>
                     <!-- HuAlarm list table end -->
 

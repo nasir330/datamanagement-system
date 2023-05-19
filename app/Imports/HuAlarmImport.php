@@ -66,10 +66,7 @@ class HuAlarmImport implements ToModel, WithValidation, SkipsOnFailure
                 'required',
                 Rule::exists('ne_types', 'ne_type')
             ],
-            '9' => [
-                'required',
-                Rule::exists('types', 'type')
-            ],
+         
         ];
     }
     public function onFailure(Failure ...$failures)

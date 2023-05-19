@@ -4,16 +4,15 @@
  <body class="hold-transition sidebar-mini layout-fixed">
      <!-- main wrapper start -->
      <div class="wrapper">
-
-         <!-- Navbar start-->
-         @include('template.nav')
-         <!-- Navbar end-->
          <!-- Menu start -->
          @include('template.menu')
          <!-- Menu end -->
 
          <!-- body content start -->
          <div class="content-wrapper dashboard-seciton">
+             <!-- Navbar start-->
+             @include('template.nav')
+             <!-- Navbar end-->
              <!-- Body main content start -->
              <section class="content">
 
@@ -150,7 +149,7 @@
                                  <h4>
                                      System Membership
                                      <a style="margin:2px; text-decoration:none;"
-                                        href="{{route('profile.membership.update',['id'=>Auth::user()->id])}}">
+                                         href="{{route('profile.membership.update',['id'=>Auth::user()->id])}}">
                                          <i class="fa-solid fa-edit text-primary"></i>
                                      </a>
                                  </h4>

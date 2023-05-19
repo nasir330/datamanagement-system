@@ -4,23 +4,22 @@
 <body class="hold-transition sidebar-mini layout-fixed">
     <!-- main wrapper start -->
     <div class="wrapper">
-
-        <!-- Navbar start-->
-        @include('template.nav')
-        <!-- Navbar end-->
         <!-- Menu start -->
         @include('template.menu')
         <!-- Menu end -->
 
         <!-- body content start -->
         <div class="content-wrapper dashboard-seciton">
-
+            <!-- Navbar start-->
+            @include('template.nav')
+            <!-- Navbar end-->
             <!-- body content header start -->
             <div class="content-header">
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-md-6">
-                            <h1 class="m-0">Search Relult of <strong class="text-primary">{{$users->username}}</strong></h1>
+                            <h1 class="m-0">Search Relult of <strong class="text-primary">{{$users->username}}</strong>
+                            </h1>
                         </div>
                         <div class="col-md-6 d-flex justify-content-end">
                             <!-- user search form start -->

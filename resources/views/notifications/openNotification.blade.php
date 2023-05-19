@@ -4,24 +4,21 @@
 <body class="hold-transition sidebar-mini layout-fixed">
     <!-- main wrapper start -->
     <div class="wrapper">
-
-        <!-- Navbar start-->
-        @include('template.nav')
-        <!-- Navbar end-->
         <!-- Menu start -->
         @include('template.menu')
         <!-- Menu end -->
-
         <!-- body content start -->
         <div class="content-wrapper dashboard-seciton">
-
+            <!-- Navbar start-->
+            @include('template.nav')
+            <!-- Navbar end-->
             <!-- body content header start -->
             <div class="content-header">
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-md-6">
                             <h1 class="m-0">Notification on action</h1>
-                        </div>                        
+                        </div>
                     </div>
                 </div>
             </div>
@@ -75,8 +72,8 @@
                                     <td>{{$notification->actionBy}}</td>
                                     <td> {{Carbon\Carbon::parse($notification->created_at)->toDayDateTimeString()}}</td>
                                     <td>
-                                    @if(Auth::user()->type == 1 || Auth::user()->type == 2)
-                                    <div class="row">
+                                        @if(Auth::user()->type == 1 || Auth::user()->type == 2)
+                                        <div class="row">
                                             <div class="col-auto">
                                                 <form action="{{route('approveNotification')}}" method="post">
                                                     @csrf
@@ -102,9 +99,9 @@
                                                 </form>
                                             </div>
                                         </div>
-                                    @else
-                                    @endif
-                                        
+                                        @else
+                                        @endif
+
                                     </td>
                                 </tr>
                             </tbody>

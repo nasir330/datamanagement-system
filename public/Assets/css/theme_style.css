@@ -21,14 +21,14 @@
 }
 
 .dashboard-seciton {
-    margin-top:5%;
+    margin-top: 5%;
     background-color: gainsboro;
     border: 1px solid lightgrey;
     border-radius: 10px 10px 10px 10px;
 }
 
 aside {
-    margin-top:0px;
+    margin-top: 0px;
     background-color: gainsboro;
     height: 100vh;
 }
@@ -42,10 +42,11 @@ aside {
   font-weight:bold;
 } */
 
-nav.navbar{
-    position:fixed;
-    top:0px;
+nav.navbar {
+    position: fixed;
+    top: 0px;
 }
+
 .nav-link i,
 p {
     text-decoration: none;
@@ -107,10 +108,22 @@ p:hover {
     background-color: blueviolet;
 }
 
+.appLogo {
+    margin: 5px auto;
+    width: 100px;
+    height:100px;
+}
+
+.appLogo img {
+    width: 100%;
+    border: 2px solid #222;
+    border-radius: 50%;
+}
+
 .profile-hader {
-    margin:10px auto;
+    margin: 10px auto;
     height: 100px;
-    border-radius: 10px 10px 0px 0px;    
+    border-radius: 10px 10px 0px 0px;
 }
 
 .profile-hader img {
@@ -120,10 +133,6 @@ p:hover {
     border-radius: 50%;
 }
 
-
-.appLogo img {
-    width:100%;    
-}
 
 table #actionTable {
     background: transparent;

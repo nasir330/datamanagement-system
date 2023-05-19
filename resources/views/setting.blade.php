@@ -4,16 +4,14 @@
 <body class="hold-transition sidebar-mini layout-fixed">
     <!-- main wrapper start -->
     <div class="wrapper">
-
-        <!-- Navbar start-->
-        @include('template.nav')
-        <!-- Navbar end-->
         <!-- Menu start -->
         @include('template.menu')
         <!-- Menu end -->
-
         <!-- body content start -->
         <div class="content-wrapper dashboard-seciton">
+            <!-- Navbar start-->
+            @include('template.nav')
+            <!-- Navbar end-->
             <!-- Body main content start -->
             <section class="content">
                 <div class="container-fluid">
@@ -63,7 +61,7 @@
                                     </tr>
                                     <tr>
                                         <td>Application Logo</td>
-                                        <td>                                          
+                                        <td>
                                             <input class="form-control" type="file" name="appLogo">
                                         </td>
                                         <td>Application display name that will be place into header above</td>
@@ -222,16 +220,17 @@
                                     </tr>
                                     <tr>
                                         <td>Application Logo</td>
-                                        <td>                                          
+                                        <td>
                                             <input class="form-control" type="file" name="appLogo">
                                         </td>
                                         <td>Application display name that will be place into header above</td>
                                     </tr>
-                                  
+
                                     <tr>
                                         <td>Session Expiration</td>
                                         <td>
-                                            <input class="form-control" type="number" name="sessionExpiration" value="" required>
+                                            <input class="form-control" type="number" name="sessionExpiration" value=""
+                                                required>
                                         </td>
                                         <td>Sesseion expiration once user deactivated the app</td>
                                     </tr>

@@ -142,6 +142,16 @@ class HuAlarmController extends Controller
         
         return view('huAlarm.searchByDate',['alarmSearchByDate'=>$alarmSearchByDate]);
     }
+    // search Alarm by type
+    public function searchHuAlarmbyType(Request $request)
+    {        
+        $alarmSearchType = HuAlarm:: where('type', 'like', $request->type. '%')->get(); 
+        return response()->json($alarmSearchType);
+
+        
+        return view('huAlarm.searchByName',['alarmSearchoIName'=>$alarmSearchoIName]);
+        
+    }
     // search Alarm by Name
     public function searchHuAlarmbyName(Request $request)
     {        

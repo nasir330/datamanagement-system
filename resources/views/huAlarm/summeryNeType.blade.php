@@ -4,17 +4,14 @@
 <body class="hold-transition sidebar-mini layout-fixed">
     <!-- main wrapper start -->
     <div class="wrapper">
-
-        <!-- Navbar start-->
-        @include('template.nav')
-        <!-- Navbar end-->
         <!-- Menu start -->
         @include('template.menu')
         <!-- Menu end -->
-
         <!-- body content start -->
         <div class="content-wrapper dashboard-seciton">
-
+            <!-- Navbar start-->
+            @include('template.nav')
+            <!-- Navbar end-->
             <!-- body content header start -->
             <div class="content-header">
                 <div class="container-fluid">
@@ -31,7 +28,8 @@
                                         <label for="neType_name" class="col-form-label">Search by NeType</label>
                                     </div>
                                     <div class="col-auto">
-                                        <input type="text" name="neType_name" class="form-control" placeholder="Enter a NeType">
+                                        <input type="text" name="neType_name" class="form-control"
+                                            placeholder="Enter a NeType">
                                     </div>
                                     <div class="col-auto">
                                         <button class="btn btn-primary">Search</button>
@@ -72,10 +70,10 @@
             <!-- Body main content start -->
             <section class="content">
                 <div class="container-fluid">
-                     <!-- notification alart section start -->
-                     <div class="row">
+                    <!-- notification alart section start -->
+                    <div class="row">
                         <div class="col d-flex justify-content-center">
-                         
+
                             @if(session()->has('delete-success'))
                             <div id="successMessage" class="text-center text-danger p-1">
                                 {{session('delete-success')}}
@@ -98,7 +96,7 @@
                                     <td>NeType</td>
                                     <td>Alarm Source</td>
                                     <td>Alarm Name</td>
-                                    <td>Domain</td>                                    
+                                    <td>Domain</td>
                                 </tr>
                             </thead>
                             <tbody class="text-center">
@@ -114,13 +112,13 @@
                                     </td>
                                     <td>{{$neType->aSource}} </td>
                                     <td>{{$neType->aName}} </td>
-                                    <td>                                        
+                                    <td>
                                         @if(!empty($neType->netypes->domain))
-                                        {{$neType->netypes->domain->domain}} 
+                                        {{$neType->netypes->domain->domain}}
                                         @else
                                         <strong class="text-danger">change/remove</strong>
                                         @endif
-                                    </td>                                                                     
+                                    </td>
                                 </tr>
 
                                 @endforeach

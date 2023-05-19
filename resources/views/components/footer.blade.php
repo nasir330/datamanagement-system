@@ -13,6 +13,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
 <!-- Bootstrap JS -->
 <script src="{{asset('Assets/js/jquery.min.js')}}"></script>
 <script src="{{asset('Assets/js/bootstrap.bundle.js')}}"></script>
@@ -22,8 +23,11 @@
 <script src="{{asset('Assets/js/barChart.js')}}"></script>
 <!-- AdminLTE JS -->
 <script src="{{asset('Assets/js/adminlte.js')}}"></script>
+<!-- serch js -->
+<script src="{{asset('Assets/js/search.js')}}"></script>
 <script>
    $(document).ready(function() {
+    $('#myTable').DataTable();
     //get auth system session expire time
     var halfSec = 5*1000;
     var system_exp = $('#sysExp').val();

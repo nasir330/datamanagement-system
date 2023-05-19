@@ -4,17 +4,14 @@
 <body class="hold-transition sidebar-mini layout-fixed">
     <!-- main wrapper start -->
     <div class="wrapper">
-
-        <!-- Navbar start-->
-        @include('template.nav')
-        <!-- Navbar end-->
         <!-- Menu start -->
         @include('template.menu')
         <!-- Menu end -->
-
         <!-- body content start -->
         <div class="content-wrapper dashboard-seciton">
-
+            <!-- Navbar start-->
+            @include('template.nav')
+            <!-- Navbar end-->
             <!-- body content header start -->
             <div class="content-header">
                 <div class="container-fluid">
@@ -70,7 +67,7 @@
                     <div class="row mb-4 p-2">
                         <table class="table table-striped table-hover">
                             <thead class="text-center text-uppercase">
-                            <tr>
+                                <tr>
                                     <td>#</td>
                                     <td>Status</td>
                                     <td>User</td>
@@ -95,7 +92,7 @@
                                     <td>{{$notification->actionBy}}</td>
                                     <td> {{Carbon\Carbon::parse($notification->created_at)->toDayDateTimeString()}}</td>
                                     <td>
-                                    <div class="row">
+                                        <div class="row">
                                             <div class="col-auto">
                                                 <form action="" method="post">
                                                     @csrf
@@ -106,7 +103,7 @@
                                                             class="fa-solid fa-check text-success"></i>
                                                     </button>
                                                 </form>
-                                            </div>                                            
+                                            </div>
                                             <div class="col-auto">
                                                 <form action="" method="post">
                                                     @csrf
@@ -115,17 +112,17 @@
                                                     <button class="bg-transparent border-0">
                                                         <i style="font-size:18px; margin:2px;"
                                                             class="fa-solid fa-xmark text-danger"></i>
-                                                            
+
                                                     </button>
                                                 </form>
-                                            </div>                                            
+                                            </div>
                                         </div>
                                     </td>
                                 </tr>
                                 @endforeach
                             </tbody>
                         </table>
-                        
+
                     </div>
                     <!-- data table end -->
                 </div>

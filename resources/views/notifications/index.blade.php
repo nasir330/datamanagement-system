@@ -4,17 +4,14 @@
 <body class="hold-transition sidebar-mini layout-fixed">
     <!-- main wrapper start -->
     <div class="wrapper">
-
-        <!-- Navbar start-->
-        @include('template.nav')
-        <!-- Navbar end-->
         <!-- Menu start -->
         @include('template.menu')
         <!-- Menu end -->
-
         <!-- body content start -->
         <div class="content-wrapper dashboard-seciton">
-
+            <!-- Navbar start-->
+            @include('template.nav')
+            <!-- Navbar end-->
             <!-- body content header start -->
             <div class="content-header">
                 <div class="container-fluid">
@@ -98,7 +95,8 @@
                                     <td>{{$notification->actionBy}}</td>
                                     <td> {{Carbon\Carbon::parse($notification->created_at)->toDayDateTimeString()}}</td>
                                     <td>
-                                    <a style="font-size:18px; margin:2px;" href="{{route('openNotification',['id'=>$notification->id])}}">Open </a>
+                                        <a style="font-size:18px; margin:2px;"
+                                            href="{{route('openNotification',['id'=>$notification->id])}}">Open </a>
                                     </td>
                                 </tr>
                                 @endforeach
